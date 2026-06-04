@@ -1,0 +1,74 @@
+[0m15:36:09.407561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C228F46BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C226C4D1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C22B48BC50>]}
+
+
+============================== 15:36:09.470199 | 8b199e56-222d-4466-a961-d94a1370e5a8 ==============================
+[0m15:36:09.470199 [info ] [MainThread]: Running with dbt=1.11.11
+[0m15:36:09.470918 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\rose_\\.dbt', 'invocation_command': 'dbt init', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m15:36:09.599780 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\rose_\.dbt
+[0m15:36:37.798543 [debug] [MainThread]: Starter project path: C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\dbt\include\starter_project
+[0m15:36:37.819370 [info ] [MainThread]: 
+Your new dbt project "wks_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:36:37.819968 [info ] [MainThread]: Setting up your profile.
+[0m15:41:59.905408 [error] [MainThread]: Encountered an error:
+
+[0m15:41:59.920387 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\dbt\cli\main.py", line 488, in init
+    results = task.run()
+  File "C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\click\termui.py", line 218, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\rose_\Documents\01_Projects\02_personal_projects\wks_dbt_airflow\1_local_setup\.venv\Lib\site-packages\click\termui.py", line 201, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:41:59.921639 [debug] [MainThread]: Command `dbt init` failed at 15:41:59.921488 after 350.83 seconds
+[0m15:41:59.922063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C22B9FE650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C22B9C1B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C22BA287C0>]}
+[0m15:41:59.922473 [debug] [MainThread]: Flushing usage events
+[0m15:42:00.743721 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:42:09.722581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFDE2AA3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFDAFD2FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFDF67FED0>]}
+
+
+============================== 15:42:09.727286 | 57cc0211-cde8-44c0-aa93-c2aa521165de ==============================
+[0m15:42:09.727286 [info ] [MainThread]: Running with dbt=1.11.11
+[0m15:42:09.727836 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\rose_\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m15:42:19.099216 [info ] [MainThread]: A project called wks_dbt already exists here.
+[0m15:42:19.101091 [debug] [MainThread]: Command `dbt init` succeeded at 15:42:19.100858 after 9.62 seconds
+[0m15:42:19.101651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFDF68F230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFE06DF0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFE068C5A0>]}
+[0m15:42:19.102196 [debug] [MainThread]: Flushing usage events
+[0m15:42:19.725106 [debug] [MainThread]: An error was encountered while trying to flush usage events
