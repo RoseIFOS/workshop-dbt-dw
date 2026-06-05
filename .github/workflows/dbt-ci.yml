@@ -19,11 +19,7 @@ jobs:
           python-version: '3.13'
 
       - name: Install dbt
-        # Pinamos também dbt-common e dbt-adapters: deixá-los soltos faz o pip
-        # baixar versões novas demais (incompatíveis com o dbt-core 1.9.4), o que
-        # quebra a validação do packages.yml. Estes valores são a combinação testada
-        # da "compatible track" do dbt para a 1.9.4.
-        run: pip install dbt-core==1.9.4 dbt-postgres==1.9.0 dbt-adapters==1.14.8 dbt-common==1.24.0
+        run: pip install dbt-core==1.9.4 dbt-postgres==1.9.0
 
       - name: Configure dbt profile
         run: |
