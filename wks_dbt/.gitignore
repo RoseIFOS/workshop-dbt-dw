@@ -2,3 +2,6 @@
 target/
 dbt_packages/
 logs/
+# Lock de pacotes dbt: gerado pelo `dbt deps`. Mantido fora do git para
+# evitar conflito de schema entre versoes de dbt (local x CI).
+package-lock.yml
